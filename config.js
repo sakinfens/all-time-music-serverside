@@ -1,3 +1,3 @@
 module.exports ={
-  MONGODB: 'mongodb://sakinfes:akinfenwa2@ds121950.mlab.com:21950/steve-a-first-mlab-db'
+  MONGODB: 'mongodb+srv://akinfenwa:akinfenwa2@cluster0.dxwtz.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
 }
