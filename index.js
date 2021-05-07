@@ -8,7 +8,7 @@ const { MONGODB } = require('./config.js');
 const PORT = process.env.PORT || 4000;
 
 const server = new ApolloServer({
-  playground: true,
+  playground: false,
   introspection: true,
   typeDefs,
   resolvers,
