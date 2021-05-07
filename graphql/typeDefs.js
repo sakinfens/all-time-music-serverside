@@ -2,9 +2,10 @@ const { gql } = require('apollo-server');
 
 module.exports = gql`
   type Song {
-    id: ID!
+    id: ID
     title: String!
     genre: String!
+    artist: String!
   }
   type Artist {
     id: ID!
@@ -17,6 +18,6 @@ module.exports = gql`
     getArtists: [Artist]
   }
   type Mutation {
-    addSongs(title: String!, genre: String!): Song!
+    addSongs(title: String!, genre: String!, artist: String!): Song!
   }
 `;

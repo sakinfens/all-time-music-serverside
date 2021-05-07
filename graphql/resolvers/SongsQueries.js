@@ -36,20 +36,21 @@ module.exports = {
 
   },
   Mutation: {
-    async addSongs(_, { body }) {
+    async addSongs(_, { title, genre, artist }) {
 
-      const newSong = new Song({
+      const newSong = new Songs({
         title,
-        genre
+        genre,
+        artist
       });
 
-      const Song = await newSong.save();
+      const song = await newSong.save();
 
-      context.pubsub.publish('NEW_Song', {
-        newSong: song
-      });
+      // context.pubsub.publish('NEW_Song', {
+      //   newSong: song
+      // });
 
-      return post;
+      return song;
     },
   }
 };
