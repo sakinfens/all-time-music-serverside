@@ -6,6 +6,7 @@ module.exports = gql`
     title: String!
     genre: String!
     artist: String!
+    cover: String!
   }
   type Artist {
     id: ID!
@@ -18,6 +19,6 @@ module.exports = gql`
     getArtists: [Artist]
   }
   type Mutation {
-    addSongs(title: String!, genre: String!, artist: String!): Song!
+    addSongs(title: String!, genre: String!, artist: String!, cover: String!): Song!
   }
 `;

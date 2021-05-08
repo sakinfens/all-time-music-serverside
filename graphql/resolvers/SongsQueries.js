@@ -36,12 +36,13 @@ module.exports = {
 
   },
   Mutation: {
-    async addSongs(_, { title, genre, artist }) {
+    async addSongs(_, { title, genre, artist, cover }) {
 
       const newSong = new Songs({
         title,
         genre,
-        artist
+        artist,
+        cover
       });
 
       const song = await newSong.save();
